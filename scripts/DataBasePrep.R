@@ -29,5 +29,8 @@ cell$conductive <- cell$ite.type == "tracheids" #asign logical values to conduct
 cell$conductive <- as.numeric(cell$conductive) #CONVERT TO NUMERIC 0= libriform and fiber tracheids
 cell$conductive[cell$conductive==0] <- "Non-conductive"  #0nonconductive
 cell$conductive[cell$conductive==1] <- "Conductive" #1 conductive
+cell$WDratio <- round((cell$vwt/cell$vd), 2) ###razón grosor pared entre diametro 
+cell$DWDratio <- round((cell$dwt/cell$vd), 2) ###razón grosor pared doble entre diametro
+
 ###Temporal copy from base
 cell.temp.subseted <- cell
