@@ -72,7 +72,7 @@ dev.off()
 #
 ####T-test and boxplot
 t.test(cell$vwt~cell$simp.scal)
-
+t.test(log10(cell$vwt) ~ cell$simp.scal)
 png("../figures/VWT_perfplate.png")
 boxplot(cell$vwt ~ cell$simp.scal[cell$simp.scal!="absent"], 
         notch = T, xlab = "Perforation plate type",
@@ -152,14 +152,14 @@ boxplot(log10(cell$vwt) ~ cell$ite.type,
         notch = T, xlab = "ITE type",
         ylab = expression(paste("Log-Vessel wall thickness ", mu, "m")))
 
-#Filtrar base
+####Double boxplot * boxplot by two factors #####
 #Regresar a la base completa
 cell <- cell.temp.subseted
 #
 lm.vwt.perfotype.bellow <- lm(log10(cell$vwt) ~ cell$simp.scal)
 summary(lm.vwt.perfotype.bellow)
 confint(lm.vwt.perfotype.bellow)
-#Eliminar ITE's sin datos
+#Removing rows without ITE information
 cell <- subset(cell, cell$ite.type!="")
 cell <- subset(cell, cell$ite.type!="absent")
 #Filter vd menor a 92
@@ -175,7 +175,9 @@ lm.vwt.perfo.itetype.bellow <- lm(log10(cell$vwt) ~ cell$simp.scal * cell$conduc
 emm1 <-emmeans(lm.vwt.perfo.itetype.bellow,specs = pairwise ~ simp.scal:conductive)
 emm1$emmeans
 emm1$contrasts
-emmeans(lm.vwt.perfo.itetype, ~ simp.scal:conductive)
+multcomp::cld(emm1, alpha = 0.10, Letters = LETTERS)
+
+emmeans(lm.vwt.perfo.itetype.bellow, ~ simp.scal:conductive)
 
 boxplot(log10(cell$vwt) ~ cell$simp.scal * cell$conductive)
 library(wesanderson)
