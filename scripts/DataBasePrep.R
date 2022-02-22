@@ -8,7 +8,8 @@ library(dplyr)
 library(emmeans) #library to get means of linear models with more than one categorical variable
 
 #Load the database
-cell <- read.csv("../conduitDiameter/Data/VesselDiameterVesselWall.csv",row.names = 1)
+#cell <- read.csv("../conduitDiameter/Data/VesselDiameterVesselWall.csv",row.names = 1)
+cell <- read.csv("data/VesselDiameterVesselWall.csv",row.names = 1)
 #Change column names
 names(cell)[1:8] <- c("ord", "fam", "gen","sp","auth", "col","ncol","o")
 names(cell)[names(cell) == "VDFinal.Vessel.diameter.interpreted"] <- "vd"

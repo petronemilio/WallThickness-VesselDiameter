@@ -20,10 +20,10 @@ summary((cell$vd))
 upperintvd <- subset(cell, cell$vd > 58) #Tercer cuartil
 lowerintvd <- subset(cell, cell$vd < 28) #Primer cuartil
 
-upperleft <- subset(lowerintvd, lowerintvd$vwt > 3) #lowerintvd[lowerintvd$vwt > 3,]
-lowerleft <-  subset(lowerintvd, lowerintvd$vwt < 2) #lowerintvd[lowerintvd$vwt < 2,]
-upperright <- subset(upperintvd, upperintvd$vwt > 3) #upperintvd[lowerintvd$vwt > 3,]
-lowerright <- subset(upperintvd, upperintvd$vwt < 2) #upperintvd[lowerintvd$vwt < 2,]
+upperleft <- subset(lowerintvd, lowerintvd$vwt > 2.6)
+lowerleft <-  subset(lowerintvd, lowerintvd$vwt < 2)
+upperright <- subset(upperintvd, upperintvd$vwt > 3)
+lowerright <- subset(upperintvd, upperintvd$vwt < 2)
 
 upperleft <- arrange(upperleft, vwt)
 upperleft <- tail(upperleft, 15)
@@ -64,7 +64,6 @@ cell$vwt[cell$gen=="Nicotiana"]
 
 ###### Especies en las esquinas DWT ######
 
-
 cell <- cell.temp.subseted
 cell$WDratio <- round((cell$vwt/cell$vd), 2) ###razón grosor pared entre diametro 
 cell$DWDratio <- round((cell$dwt/cell$vd), 2) ###razón grosor pared doble entre diametro
@@ -83,10 +82,10 @@ summary((cell$vd))
 upperintvd <- subset(cell, cell$vd > 58) #Tercer cuartil
 lowerintvd <- subset(cell, cell$vd < 28) #Primer cuartil
 
-upperleft_dwt <- subset(lowerintvd, lowerintvd$dwt > 6.625) #lowerintvd[lowerintvd$dwt > 3,]
-lowerleft_dwt <-  subset(lowerintvd, lowerintvd$dwt < 4.6) #lowerintvd[lowerintvd$dwt < 2,]
-upperright_dwt <- subset(upperintvd, upperintvd$dwt > 6.625) #upperintvd[lowerintvd$dwt > 3,]
-lowerright_dwt <- subset(upperintvd, upperintvd$dwt < 4.6) #upperintvd[lowerintvd$dwt < 2,]
+upperleft_dwt <- subset(lowerintvd, lowerintvd$dwt > 6.625)
+lowerleft_dwt <-  subset(lowerintvd, lowerintvd$dwt < 4.6)
+upperright_dwt <- subset(upperintvd, upperintvd$dwt > 6.625)
+lowerright_dwt <- subset(upperintvd, upperintvd$dwt < 4.6)
 
 upperleft_dwt <- arrange(upperleft_dwt, dwt)
 upperleft_dwt <- tail(upperleft_dwt, 15)

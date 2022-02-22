@@ -1,0 +1,16 @@
+"","fam","spe","vd","vwt","dwt","ite.type","simp.scal","WDratio","DWDratio"
+"1","Salvadoraceae","Salvadora persica",9,5,9.2,"libriform","simple",0.56,1.02
+"2","Salvadoraceae","Salvadora persica",12,5,9.2,"libriform","simple",0.42,0.77
+"3","Plumbaginaceae","Limonium californicum",13,5.1,7.3,"libriform","simple",0.39,0.56
+"4","Ranunculaceae","Helleborus viridis",13,5,6,"libriform","simple",0.38,0.46
+"5","Plumbaginaceae","Limonium commune",14,4.7,7.2,"libriform","simple",0.34,0.51
+"6","Stilbaceae","Stilbe albiflora",14.8,4.6,6.7,"libriform","scalariform",0.31,0.45
+"7","Scrophulariaceae","Emorya suaveolens",15,4.6,9.4,"libriform","simple",0.31,0.63
+"8","Polemoniaceae","Phlox diffusa",19,5.3,11.1,"tracheids","simple",0.28,0.58
+"9","Polemoniaceae","Phlox diffusa",21,5.8,12.7,"tracheids","simple",0.28,0.6
+"10","Convolvulaceae","Wilsonia humilis",20,4.4,9.5,"tracheids","simple",0.22,0.48
+"11","Krameriaceae","Krameria secundiflora",27,6,NA,"tracheids","simple",0.22,NA
+"12","Salvadoraceae","Azima tetracantha",25,5,11,"libriform","simple",0.2,0.44
+"13","Krameriaceae","Krameria sonorae",25,5,NA,"tracheids","simple",0.2,NA
+"14","Passifloraceae","Malesherbia linearifolia",27,4.5,8,"libriform","simple",0.17,0.3
+"15","Montiniaceae","Montinia caryophyllacea",26,4.1,8.9,"libriform","simple",0.16,0.34
