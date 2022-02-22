@@ -24,6 +24,7 @@ cell$vd <- as.numeric(cell$vd)
 cell$vwt <- as.numeric(cell$vwt)
 cell$ite.wt <- as.numeric(cell$ite.wt)
 cell$dwt <- as.numeric(cell$dwt)
+cell$dwt.conditional <- ifelse(cell$vg > 1.5, cell$vwt*2, cell$vwt+cell$ite.wt)
 cell$spe <- paste(cell$gen, cell$sp, sep=" ")
 ##
 cell$conductive <- cell$ite.type == "tracheids" #asign logical values to conductive. Tracheids =TRUE
