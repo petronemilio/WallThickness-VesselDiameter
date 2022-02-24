@@ -127,10 +127,10 @@ LowerRightCorner <- lowerright[,c("fam","spe","vd","vwt", "dwt", "ite.type", "si
 UpperLeftCorner <-upperleft[,c("fam","spe","vd","vwt", "dwt", "ite.type", "simp.scal", "WDratio", "DWDratio")]
 LowerLeftCorner <-lowerleft[,c("fam","spe","vd","vwt", "dwt", "ite.type", "simp.scal", "WDratio", "DWDratio")]
 
-write.csv(UpperRightCorner, "UpperRightCorner.csv")
-write.csv(LowerRightCorner, "LowerRightCorner.csv")
-write.csv(UpperLeftCorner, "UpperLeftCorner.csv")
-write.csv(LowerLeftCorner, "LowerLeftCorner.csv")
+write.csv(UpperRightCorner, "results/tables/UpperRightCorner.csv")
+write.csv(LowerRightCorner, "results/tables/LowerRightCorner.csv")
+write.csv(UpperLeftCorner, "results/tables/UpperLeftCorner.csv")
+write.csv(LowerLeftCorner, "results/tables/LowerLeftCorner.csv")
 
 #Tabla DWT
 
@@ -140,10 +140,10 @@ UpperLeftCornerDW <- upperleft_dwt[,c("fam","spe","vd","vwt", "dwt", "ite.type",
 LowerLeftCornerDW <-lowerleft_dwt[,c("fam","spe","vd","vwt", "dwt", "ite.type", "simp.scal", "WDratio", "DWDratio")]
 
 
-write.csv(UpperRightCornerDW, "UpperRightCornerDW.csv")
-write.csv(LowerRightCornerDW, "LowerRightCornerDW.csv")
-write.csv(UpperLeftCornerDW, "UpperleftCornerDW.csv")
-write.csv(LowerLeftCornerDW, "LowerLeftCornerDW.csv")
+write.csv(UpperRightCornerDW, "results/tables/UpperRightCornerDW.csv")
+write.csv(LowerRightCornerDW, "results/tables/LowerRightCornerDW.csv")
+write.csv(UpperLeftCornerDW, "results/tables/UpperleftCornerDW.csv")
+write.csv(LowerLeftCornerDW, "results/tables/LowerLeftCornerDW.csv")
 
 ###
 setdiff(upperright$spe,upperright_dwt$spe)
