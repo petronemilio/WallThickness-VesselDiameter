@@ -1,4 +1,4 @@
-#####The vessel wall thickness-vessel diameter across Angiosperms
+##### The vessel wall thickness-vessel diameter across Angiosperms
 
 This repo contains the scripts and analysis from [Echeverría et al. 2022](https://bsapubs.onlinelibrary.wiley.com/doi/full/10.1002/ajb2.1854).
 
